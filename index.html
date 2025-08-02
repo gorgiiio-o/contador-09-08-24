@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiempo juntos ❤️</title>
+  <style>
+    body {
+      background: #ffe6ec;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #ff3366;
+      margin-bottom: 20px;
+    }
+    .contador {
+      font-size: 1.5rem;
+      background: white;
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 300px;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tiempo juntos ❤️</h1>
+  <div class="contador" id="contador"></div>
+
+  <script>
+    const inicio = new Date(2024, 7, 9, 0, 0, 0); // Cambia esta fecha si es necesario
+
+    function actualizar() {
+      const ahora = new Date();
+
+      let totalSegundos = Math.floor((ahora - inicio) / 1000);
+
+      let años = ahora.getFullYear() - inicio.getFullYear();
+      let meses = (ahora.getMonth() - inicio.getMonth()) + años * 12;
+
+      let semanas = Math.floor(totalSegundos / (60 * 60 * 24 * 7));
+      let dias = Math.floor(totalSegundos / (60 * 60 * 24));
+      let horas = Math.floor((totalSegundos % (60 * 60 * 24)) / 3600);
+      let minutos = Math.floor((totalSegundos % 3600) / 60);
+      let segundos = totalSegundos % 60;
+
+      document.getElementById("contador").innerHTML = `
+        <strong>${años}</strong> años<br>
+        <strong>${meses}</strong> meses<br>
+        <strong>${semanas}</strong> semanas<br>
+        <strong>${dias}</strong> días<br>
+        <strong>${horas}</strong> horas<br>
+        <strong>${minutos}</strong> minutos<br>
+        <strong>${segundos}</strong> segundos
+      `;
+    }
+
+    setInterval(actualizar, 1000);
+    actualizar();
+  </script>
+</body>
+</html>
