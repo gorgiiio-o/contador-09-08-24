@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tiempo juntos ❤️</title>
+  <title>tiempo juntitos 💘💘💘</title>
   <style>
     body {
-      background: #ffe6ec;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
+     background: 
+       body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: 'Great Vibes', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
     }
     h1 {
       color: #ff3366;
@@ -66,5 +69,30 @@
     setInterval(actualizar, 1000);
     actualizar();
   </script>
+  <script>
+  
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.position = 'fixed';
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.top = '-20px';
+    heart.style.fontSize = '24px';
+    heart.style.opacity = 0.8;
+    heart.style.animation = 'caer 5s linear forwards';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }, 700);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes caer {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
 </body>
+
 </html>
