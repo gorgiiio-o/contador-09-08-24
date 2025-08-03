@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>tiempo juntitos 💘💘💘</title>
+  <title>TIEMPO JUNTITOS MIAMORRR💗💗💗</title>
   <style>
     body {
-     background: 
-       body {
-  background: #ffe6ec;
+      background: #ffe6ec;
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
@@ -17,10 +15,9 @@
       height: 100vh;
       margin: 0;
       text-align: center;
-}
     }
     h1 {
-      color: #ff5a61;
+      color: #ff3366;
       margin-bottom: 20px;
     }
     .contador {
@@ -35,12 +32,11 @@
   </style>
 </head>
 <body>
-  <h1>Tiempo juntitos 💖💗</h1>
+  <h1>Tiempo juntitos 💘💖</h1>
   <div class="contador" id="contador"></div>
-  <button onclick="document.getElementById('musica').play()">Reproducir música</button>
-  <audio id="musica" src="Love.mp3" autoplay loop></audio>
+
   <script>
-    const inicio = new Date(2024, 7, 9, 0, 0, 0);
+    const inicio = new Date(2024, 7, 9, 0, 0, 0); // Cambia esta fecha si es necesario
 
     function actualizar() {
       const ahora = new Date();
@@ -70,32 +66,30 @@
     setInterval(actualizar, 1000);
     actualizar();
   </script>
-  <script>
-  
-  setInterval(() => {
-    const heart = document.createElement('div');
-    heart.innerHTML = '💘';
-    heart.style.position = 'fixed';
-    heart.style.left = Math.random() * window.innerWidth + 'px';
-    heart.style.top = '-20px';
-    heart.style.fontSize = '24px';
-    heart.style.opacity = 0.8;
-    heart.style.animation = 'caer 5s linear forwards';
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
-  }, 700);
+   <script>
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.innerHTML = '💘';
+      heart.style.position = 'fixed';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = '-20px';
+      heart.style.fontSize = '24px';
+      heart.style.opacity = 0.8;
+      heart.style.animation = 'caer 6s linear forwards';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 700);
 
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes caer {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
-  `;
-  document.head.appendChild(style);
-</script>
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes caer {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(100vh); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+   </script>
 </body>
-
 </html>
 
 
