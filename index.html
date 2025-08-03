@@ -34,8 +34,8 @@
 <body>
   <h1>Tiempo juntitos 💘💖</h1>
   <div class="contador" id="contador"></div>
-   <button onclick="document.getElementById('musica').play()">Reproducir música</button>
-  <audio id="musica" src="Love.mp3" autoplay loop></audio>
+   <button onclick="toggleMusic()" id="musicaBtn">Reproducir música 🎵</button>
+  <audio id="musica" src="Love.mp3" loop></audio>
   <script>
     const inicio = new Date(2024, 7, 9, 0, 0, 0); // Cambia esta fecha si es necesario
 
@@ -92,6 +92,7 @@
    </script>
 </body>
 </html>
+
 
 
 
