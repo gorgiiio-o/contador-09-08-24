@@ -8,7 +8,7 @@
     body {
      background: 
        body {
-  background: #ff5a61;
+  background: #ffe6ec;
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
@@ -20,7 +20,7 @@
 }
     }
     h1 {
-      color: #ff3366;
+      color: #ff5a61;
       margin-bottom: 20px;
     }
     .contador {
@@ -37,6 +37,7 @@
 <body>
   <h1>Tiempo juntitos 💖💗</h1>
   <div class="contador" id="contador"></div>
+  <button onclick="document.getElementById('musica').play()">Reproducir música</button>
   <audio id="musica" src="Love.mp3" autoplay loop></audio>
   <script>
     const inicio = new Date(2024, 7, 9, 0, 0, 0);
@@ -96,6 +97,7 @@
 </body>
 
 </html>
+
 
 
 
