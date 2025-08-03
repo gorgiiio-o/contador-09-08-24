@@ -29,24 +29,37 @@
       max-width: 300px;
       line-height: 2;
     }
+    #musicaBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff99bb;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+    }
+    #musicaBtn:hover {
+      background-color: #ff6699;
+    }
   </style>
 </head>
 <body>
   <h1>Tiempo juntitos 💘💖</h1>
   <div class="contador" id="contador"></div>
-   <button onclick="toggleMusic()" id="musicaBtn">Reproducir música 🎵</button>
+
+  <button onclick="toggleMusic()" id="musicaBtn">Reproducir música 🎵</button>
   <audio id="musica" src="Love.mp3" loop></audio>
+
   <script>
-    const inicio = new Date(2024, 7, 9, 0, 0, 0); // Cambia esta fecha si es necesario
+    const inicio = new Date(2024, 7, 9, 0, 0, 0); // Meses empiezan en 0: julio = 6, agosto = 7
 
     function actualizar() {
       const ahora = new Date();
-
       let totalSegundos = Math.floor((ahora - inicio) / 1000);
 
       let años = ahora.getFullYear() - inicio.getFullYear();
       let meses = (ahora.getMonth() - inicio.getMonth()) + años * 12;
-
       let semanas = Math.floor(totalSegundos / (60 * 60 * 24 * 7));
       let dias = Math.floor(totalSegundos / (60 * 60 * 24));
       let horas = Math.floor((totalSegundos % (60 * 60 * 24)) / 3600);
@@ -67,7 +80,23 @@
     setInterval(actualizar, 1000);
     actualizar();
   </script>
-   <script>
+
+  <script>
+    function toggleMusic() {
+      const musica = document.getElementById('musica');
+      const boton = document.getElementById('musicaBtn');
+
+      if (musica.paused) {
+        musica.play();
+        boton.textContent = "Pausar música ⏸️";
+      } else {
+        musica.pause();
+        boton.textContent = "Reproducir música 🎵";
+      }
+    }
+  </script>
+
+  <script>
     setInterval(() => {
       const heart = document.createElement('div');
       heart.innerHTML = '💘';
@@ -89,12 +118,9 @@
       }
     `;
     document.head.appendChild(style);
-   </script>
+  </script>
 </body>
 </html>
-
-
-
 
 
 
