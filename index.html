@@ -34,7 +34,8 @@
 <body>
   <h1>Tiempo juntitos 💘💖</h1>
   <div class="contador" id="contador"></div>
-
+   <button onclick="document.getElementById('musica').play()">Reproducir música</button>
+  <audio id="musica" src="Love.mp3" autoplay loop></audio>
   <script>
     const inicio = new Date(2024, 7, 9, 0, 0, 0); // Cambia esta fecha si es necesario
 
@@ -75,7 +76,7 @@
       heart.style.top = '-20px';
       heart.style.fontSize = '24px';
       heart.style.opacity = 0.8;
-      heart.style.animation = 'caer 6s linear forwards';
+      heart.style.animation = 'caer 7s linear forwards';
       document.body.appendChild(heart);
       setTimeout(() => heart.remove(), 5000);
     }, 700);
@@ -91,6 +92,7 @@
    </script>
 </body>
 </html>
+
 
 
 
